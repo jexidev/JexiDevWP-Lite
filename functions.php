@@ -26,7 +26,6 @@ function jexidev_enqueue_assets() {
         $main_js_ver,
         true
     );
-
 }
 
 // Register theme supports, menus, and other initial setup
@@ -44,3 +43,7 @@ function jexidev_theme_setup() {
     ));
 }
 
+// Footer attribution toggle
+function jexidevwp_show_attribution() {
+    return apply_filters('jexidevwp_show_attribution', true);
+}
