@@ -22,6 +22,7 @@ function jexidev_enqueue_assets() {
     wp_enqueue_script(
         'jexidev-scripts',
         get_stylesheet_directory_uri() . '/js/custom-scripts.js',
+        array(),
         $main_js_ver,
         true
     );
