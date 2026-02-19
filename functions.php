@@ -39,6 +39,7 @@ function jexidev_theme_setup() {
     
     register_nav_menus(array(
         'primary' => 'Primary Menu',
+        'mobile' => 'Mobile',
         'footer' => 'Footer Menu'
     ));
 }
