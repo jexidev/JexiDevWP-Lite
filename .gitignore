@@ -1,0 +1,13 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# WordPress / PHP junk
+*.log
+wp-config.php
+node_modules/
+
+# Local environment stuff
+.env
+.vscode/
+Docs/
