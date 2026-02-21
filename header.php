@@ -10,59 +10,59 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
-  <div id="wrapper" class="hfeed">
+  <header class="site-header">
 
-    <header class="site-header">
-      <!-- Desktop Header -->
-      <div class="header-container">
+    <!-- Desktop Header -->
+    <div class="header-container">
+
+      <div class="site-branding">
+        <?php
+        if ( function_exists('the_custom_logo') && has_custom_logo() ) {
+            the_custom_logo();
+        } else {
+            echo '<a href="' . esc_url( home_url('/') ) . '">' . get_bloginfo('name') . '</a>';
+        }
+        ?>
+      </div>
+
+      <nav class="main-nav">
+        <?php
+        wp_nav_menu([
+          'theme_location' => 'primary',
+          'container'      => false,
+          'menu_class'     => '',
+          'items_wrap'     => '<ul>%3$s</ul>'
+        ]);
+        ?>
+      </nav>
+
+      <!-- Mobile Header -->
+      <div class="m-header-container">
+
         <div class="site-branding">
           <?php
-          if (function_exists('the_custom_logo') && has_custom_logo()) {
-            the_custom_logo();
+          if ( function_exists('the_custom_logo') && has_custom_logo() ) {
+              the_custom_logo();
           } else {
-            echo '<a href="' . esc_url(home_url('/')) . '">' . get_bloginfo('name') . '</a>';
+              echo '<a href="' . esc_url( home_url('/') ) . '">' . get_bloginfo('name') . '</a>';
           }
           ?>
         </div>
 
-        <nav class="main-nav">
-          <?php
-          wp_nav_menu([
-            'theme_location' => 'primary',
-            'container'      => false,
-            'menu_class'     => '',
-            'items_wrap'     => '<ul>%3$s</ul>'
-          ]);
-          ?>
-        </nav>
+        <button class="menu-toggle" aria-controls="m-menu-nav" aria-expanded="false"></button>
+      </div>
 
-        <!-- Mobile Header -->
-        <div class="m-header-container">
-          <div class="site-branding">
-            <?php
-            if (function_exists('the_custom_logo') && has_custom_logo()) {
-              the_custom_logo();
-            } else {
-              echo '<a href="' . esc_url(home_url('/')) . '">' . get_bloginfo('name') . '</a>';
-            }
-            ?>
-          </div>
+      <nav class="m-menu-nav" id="m-menu-nav">
+        <?php
+        wp_nav_menu([
+          'theme_location' => 'mobile',
+          'container'      => false,
+          'menu_class'     => '',
+          'items_wrap'     => '<ul>%3$s</ul>'
+        ]);
+        ?>
+      </nav>
 
-          <button class="menu-toggle" aria-controls="m-menu-nav" aria-expanded="false"></button>
-        </div>
-        <div>
-          <nav class="m-menu-nav" id="m-menu-nav">
-            <?php
-            wp_nav_menu([
-              'theme_location' => 'mobile',
-              'container'      => false,
-              'menu_class'     => '',
-              'items_wrap'     => '<ul>%3$s</ul>'
-            ]);
-            ?>
-          </nav>
-        </div>
-    </header>
+    </div><!-- .header-container -->
 
-    <div id="container">
-      <main id="content" role="main">
+  </header>
