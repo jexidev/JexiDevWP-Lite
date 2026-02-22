@@ -21,3 +21,8 @@ function jexidevwp_remove_wp_version() {
 function jexidevwp_disable_emojis() {
     return apply_filters( 'jexidevwp_disable_emojis', true );
 }
+
+// Disable oEmbeds
+function jexidevwp_disable_oembeds() {
+    return apply_filters( 'jexidevwp_disable_oembeds', true );
+}
