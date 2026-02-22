@@ -29,7 +29,7 @@ if ( jexidevwp_disable_emojis() ) {
 }
 
 // Disable oEmbeds
-if ( jexidev_disable_oembeds() ) {
+if ( jexidevwp_disable_oembeds() ) {
     remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
     remove_action( 'rest_api_init', 'wp_oembed_register_route' );
     add_filter( 'embed_oembed_discover', '__return_false' );
