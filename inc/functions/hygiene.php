@@ -1,12 +1,12 @@
 <?php
 /**
  * Collection of security functions - can all be toggled in toggle.php
- * -1- Security
- * -2- Cleanup
- * -3- Metadata removal
- * -4- Script removal
- * -5- REST restrictions
- * -6- Admin UI restrictions
+ * -1- SECURITY
+ * -2- CLEANUP
+ * -3- METADATA REMOVAL
+ * -4- SCRIPT REMOVAL
+ * -5- REST RESTRICTIONS
+ * -6- Admin UI RESTRICTIONS
  */
 
 
