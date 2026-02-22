@@ -11,3 +11,7 @@ function jexidevwp_disable_xmlrpc() {
     return apply_filters( 'jexidevwp_disable_xmlrpc', true );
 }
 
+// Disable emoji 
+function jexidevwp_disable_emojis() {
+    return apply_filters( 'jexidevwp_disable_emojis', true );
+}
