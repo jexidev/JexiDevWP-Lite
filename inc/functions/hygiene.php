@@ -8,6 +8,10 @@ if ( jexidevwp_disable_xmlrpc() ) {
     add_filter( 'xmlrpc_enabled', '__return_false' );
 }
 
+// Remove WP Versioning
+if ( jexidevwp_remove_wp_version() ) {
+    remove_action('wp_head', 'wp_generator');
+}
 
 // -- CLEANUP
 // Disable legacy emoji script
