@@ -7,6 +7,7 @@
     "cssnano": "^7.1.2",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.97.3"
   }
 }
