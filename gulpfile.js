@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -20,8 +21,10 @@ function styles() {
     ];
 
     return gulp.src(paths.scss)
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(plugins))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.css));
 }
 
