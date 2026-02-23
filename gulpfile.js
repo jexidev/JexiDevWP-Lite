@@ -4,6 +4,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 // Paths
 const paths = {
     scss: './assets/scss/**/*.scss',
@@ -12,10 +14,15 @@ const paths = {
 
 // Compile SCSS
 function styles() {
+    const plugins = [
+        autoprefixer(),
+        ...(isProduction ? [cssnano()] : [])
+    ];
+
     return gulp.src(paths.scss)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest(paths.css));
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss(plugins))
+        .pipe(gulp.dest(paths.css));
 }
 
 // Watch task
@@ -25,4 +32,4 @@ function watchFiles() {
 
 exports.styles = styles;
 exports.watch = watchFiles;
-exports.defaults = gulp.series(styles, watchFiles);
+exports.default = gulp.series(styles, watchFiles);
