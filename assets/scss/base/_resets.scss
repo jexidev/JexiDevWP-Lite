@@ -16,9 +16,10 @@ dd {
   margin: 0;
 }
 
-// Better text spacing
+// Better text spacing and MacOS font rendering
 body {
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
 // Better image control
