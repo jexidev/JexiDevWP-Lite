@@ -19,7 +19,8 @@
         wp_nav_menu([
           'theme_location' => 'footer',
           'container'      => false,
-          'items_wrap'     => '<ul>%3$s</ul>'
+          'fallback_cb' => false,
+          'items_wrap'     => '<ul class="footer-nav__list">%3$s</ul>'
         ]);
       ?>
     </nav>
