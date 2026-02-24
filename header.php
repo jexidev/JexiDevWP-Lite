@@ -24,12 +24,13 @@
 
     <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false"></button>
 
-    <nav class="main-nav">
+    <nav  class="main-nav">
       <?php
       wp_nav_menu([
         'theme_location' => 'primary',
         'container'      => false,
-        'items_wrap'     => '<ul>%3$s</ul>'
+        'fallback_cb' => false,
+        'items_wrap'     => '<ul class="main-nav__list">%3$s</ul>'
       ]);
       ?>
     </nav>
@@ -39,7 +40,8 @@
       wp_nav_menu([
         'theme_location' => 'mobile',
         'container'      => false,
-        'items_wrap'     => '<ul>%3$s</ul>'
+        'fallback_cb' => false,
+        'items_wrap'     => '<ul class="mobile-nav__list">%3$s</ul>'
       ]);
       ?>
     </nav>
