@@ -5,13 +5,9 @@ body {
   background-color: #fff;
 }
 
-// Add space between main content and header/footer
+// Rules for "main" content alignment
 main {
   padding-block: 2rem;
-}
-
-// Make topography feel readable
-.entry-content {
   max-width: 70ch;
   margin-inline: auto;
   padding-inline: 1rem;
