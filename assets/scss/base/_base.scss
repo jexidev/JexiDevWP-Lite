@@ -17,6 +17,29 @@ main {
   padding-inline: 1rem;
 }
 
+// Headings
 h1, h2, h3, h4, h5, h6 {
-  
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  color: #111
 } 
+
+// Heading spacing scale
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+// Default link rules
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  text-decoration-thickness: 2px;
+}
