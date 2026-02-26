@@ -1,13 +1,30 @@
 .site-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
     position: relative;
 }
 
 .mobile-nav {
-    position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
+}
+
+.menu-toggle {
+  display: block;
+  flex-shrink: 0;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.main-nav {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
 }
