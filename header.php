@@ -22,7 +22,9 @@
       ?>
     </div>
 
-    <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false"></button>
+    <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
+      <span></span>
+    </button>
 
     <nav  class="main-nav">
       <?php
