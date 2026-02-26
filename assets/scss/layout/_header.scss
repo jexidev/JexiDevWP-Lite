@@ -1,30 +1,46 @@
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 1rem; 
+  background-color: black;
 }
 
-.mobile-nav {
-    top: 100%;
-    left: 0;
-    width: 100%;
+.site-branding {
+  flex: 0 0 auto;
 }
 
 .menu-toggle {
+  margin-left: auto;
   display: block;
-  flex-shrink: 0;
 
   @media (min-width: 1024px) {
     display: none;
   }
 }
 
+// Desktop nav
 .main-nav {
   display: none;
 
   @media (min-width: 1024px) {
     display: block;
+    margin-left: auto;
   }
 }
+
+// Mobile Nav
+.mobile-nav {
+  display: none;
+  flex-basis: 100%;   
+  margin-top: 0.5rem; 
+
+  &.is-open {
+    display: block;
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
