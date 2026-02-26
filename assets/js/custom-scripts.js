@@ -1,5 +1,4 @@
-// -- Header toggle script
-// Mobile menu toggle
+// -- Header Toggle
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
