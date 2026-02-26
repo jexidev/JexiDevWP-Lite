@@ -10,3 +10,27 @@ nav a {
   text-decoration: none;
   color: white;
 }
+
+// mobile nav
+
+.mobile-nav {
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+.main-nav {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}

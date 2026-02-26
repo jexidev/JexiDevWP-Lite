@@ -2,4 +2,12 @@
     display: flex;
     justify-content: space-between;
     background-color: black;
+    position: relative;
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
 }
