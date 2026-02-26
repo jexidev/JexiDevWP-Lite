@@ -1,0 +1,45 @@
+.menu-toggle {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &::before,
+  &::after,
+  span {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: currentColor;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    top: 8px;
+  }
+
+  &::after {
+    bottom: 8px;
+  }
+
+  &.is-open::before {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  &.is-open::after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  &.is-open span {
+    opacity: 0;
+  }
+}
