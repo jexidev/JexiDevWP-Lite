@@ -26,7 +26,7 @@ It provides:
 
 The goal is to create a stable, predictable foundation that can be extended via child themes or iterative development.
 
-## Features (v1)
+## Features (v1.0.0)
 
 - Standard WordPress template hierarchy
 - Modular template parts for loops
