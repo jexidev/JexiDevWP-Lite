@@ -130,6 +130,6 @@ Future versions may include:
 
 ## Status
 
-**v1 — Stable foundation release.**
+**v1.0.0 - Stable foundation release.**
 
 This version establishes structural integrity and core behaviour for future expansion.
