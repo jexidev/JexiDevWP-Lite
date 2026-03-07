@@ -26,7 +26,7 @@ It provides:
 
 The goal is to create a stable, predictable foundation that can be extended via child themes or iterative development.
 
-## Features (v1.0.0)
+## Features (v1.1.0)
 
 - Standard WordPress template hierarchy
 - Modular template parts for loops
@@ -34,6 +34,7 @@ The goal is to create a stable, predictable foundation that can be extended via 
 - SCSS folder architecture (abstracts, base, components, layout, etc.)
 - Gulp-based SCSS compilation
 - Clean separation of concerns in `/inc/functions`
+- Default image size handling and custom_logo
 
 ## File Structure Overview
 
@@ -128,8 +129,11 @@ Future versions may include:
 - Additional template parts
 - Further optimisation of PHP structure
 
-## Status
+## Changelog
 
-**v1.0.0 - Stable foundation release.**
+### v1.1.0 — Image Handling Improvements
+Added custom image sizes (`jexidevwp-logo`, `jexidevwp-thumb`, `jexidevwp-medium`, `jexidevwp-large`) and implemented responsive logo support via `custom-logo`. Added SCSS constraints to ensure consistent logo rendering across header and footer.
 
-This version establishes structural integrity and core behaviour for future expansion.
+### v1.0.0 — Initial Release
+Initial stable release of JDWP Lite.
+
