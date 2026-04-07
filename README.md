@@ -24,7 +24,7 @@ It provides:
 - Modular SCSS architecture
 - Organised PHP structure via `/inc`
 
-The goal is to create a stable, predictable foundation that can be extended via child themes or iterative development.
+The goal is to create a stable, predictable foundation that can be extended via child theming or iterative development.
 
 ## Features (v1.1.0)
 
